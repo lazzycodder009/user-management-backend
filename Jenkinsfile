@@ -7,7 +7,7 @@ pipeline{
                 sh 'mvn clean build'
             }
         }
-        stage('Build'){
+        stage('Test'){
             steps{
                 echo 'Running Test cases!!'
                 sh 'mvn test '
