@@ -13,5 +13,12 @@ pipeline{
                 sh 'mvn test '
             }
         }
+        stage('Code-Scan'){
+            steps{
+                 withSonarQubeEnv('SonarQubeServer') {
+                 sh 'mvn clean package sonar:sonar'
+              }
+            }
+        }
     }
 }
