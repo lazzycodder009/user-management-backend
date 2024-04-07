@@ -29,7 +29,7 @@ pipeline{
             steps{
                 script{
                     sh "docker build -t myapp ."
-                    sh "docker run -p 8888:8080 myapp"
+                    sh "docker run -p 8888:8000 myapp"
                 }
             }
         }
